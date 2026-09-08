@@ -33,5 +33,17 @@ def absen():
     conn.close()
 
     return "Absen berhasil: " + nama
+    @app.route("/admin")
+def admin():
+    conn = db()
+    data = conn.execute(
+        "SELECT * FROM absen ORDER BY id DESC"
+    ).fetchall()
+    conn.close()
+
+    return render_template(
+        "admin.html",
+        data=data
+    )
 
 app.run(host="0.0.0.0", port=5000)
