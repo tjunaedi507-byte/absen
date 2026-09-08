@@ -1,18 +1,107 @@
-templates/index.html
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Absen QR</title>
+<title>Sistem Absen</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f1f5ff;
+}
+
+.header{
+    background:linear-gradient(135deg,#2563eb,#4f46e5);
+    color:white;
+    padding:25px;
+    text-align:center;
+}
+
+.container{
+    max-width:500px;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 30px #ccc;
+}
+
+h2{
+    text-align:center;
+    color:#1e3a8a;
+}
+
+input{
+    width:100%;
+    padding:15px;
+    margin-top:15px;
+    border-radius:10px;
+    border:1px solid #ddd;
+    box-sizing:border-box;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    margin-top:20px;
+    background:#2563eb;
+    color:white;
+    border:0;
+    border-radius:10px;
+    font-size:16px;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+.card{
+    margin-top:20px;
+    padding:15px;
+    background:#eff6ff;
+    border-radius:10px;
+}
+</style>
+
 </head>
+
 <body>
 
-<h2>ABSEN KARYAWAN</h2>
+<div class="header">
+<h1>📋 Sistem Absen</h1>
+<p>Karyawan / Pegawai</p>
+</div>
+
+
+<div class="container">
+
+<h2>Selamat Datang</h2>
 
 <form action="/absen">
-    Nama:
-    <input type="text" name="nama" required>
-    <button type="submit">Absen</button>
+
+<label>Nama Karyawan</label>
+
+<input 
+type="text" 
+name="nama" 
+placeholder="Masukkan nama"
+required>
+
+
+<button>
+✅ Absen Sekarang
+</button>
+
 </form>
+
+
+<div class="card">
+⏰ Absen tercatat otomatis<br>
+📅 Waktu menggunakan sistem
+</div>
+
+
+</div>
 
 </body>
 </html>
