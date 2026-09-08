@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Absen</title>
+
+<style>
+body{
+font-family:Arial;
+background:#f1f5ff;
+padding:20px;
+}
+
+.container{
+background:white;
+padding:20px;
+border-radius:15px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th,td{
+padding:12px;
+border-bottom:1px solid #ddd;
+text-align:left;
+}
+
+th{
+background:#2563eb;
+color:white;
+}
+
+h2{
+color:#1e3a8a;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>📋 Data Absen</h2>
+
+<table>
+<tr>
+<th>No</th>
+<th>Nama</th>
+<th>Waktu</th>
+</tr>
+
+{% for row in data %}
+
+<tr>
+<td>{{row[0]}}</td>
+<td>{{row[1]}}</td>
+<td>{{row[2]}}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+</div>
+
+</body>
+</html>
